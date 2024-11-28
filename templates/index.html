@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteo de Participantes</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
+</head>
+<body>
+    <!-- Encabezado del evento -->
+    <header class="header">
+        <img src="{{ url_for('static', filename='img/logo_PB.jpg') }}" alt="Logo Palo Blanco" class="logo">
+        <h1 class="event-title">Convivio Palo Blanco 2024</h1>
+    </header>
+
+    <div class="container">
+        <div class="sorteo-card">
+            <h1>Sorteo de Participantes</h1>
+            <form method="POST" enctype="multipart/form-data" id="upload-form">
+                <div class="file-input-wrapper">
+                    <input type="file" name="file" id="file-upload" accept=".csv,.xlsx,.xls" class="file-input">
+                    <label for="file-upload" class="file-label">
+                        <span class="file-icon">📁</span>
+                        <span class="file-text">Seleccionar archivo</span>
+                    </label>
+                    <p id="file-name" class="file-name">Ningún archivo seleccionado</p>
+                </div>
+                <button type="submit" class="btn-sorteo" id="submit-button" disabled>Realizar Sorteo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loader para mostrar mientras se procesa el sorteo -->
+    <div class="loader-container">
+        <div class="spinner"></div>
+        <h2>Determinando el ganador...</h2>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

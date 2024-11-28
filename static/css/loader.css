@@ -1,0 +1,33 @@
+/* Loader */
+.loader-container {
+    display: none; /* Por defecto está oculto */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    margin-top: 20px; /* Espaciado debajo de la tarjeta del sorteo */
+}
+
+.loader-container.active {
+    display: block; /* Se mostrará cuando se active */
+}
+
+.spinner {
+    border: 5px solid #f3f3f3; /* Color gris claro */
+    border-top: 5px solid #3498db; /* Color del spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animación giratoria */
+    margin: 0 auto; /* Centramos el spinner */
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-container h2 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
