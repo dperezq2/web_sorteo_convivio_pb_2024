@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resultado del Sorteo</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/png">
     <!-- FontAwesome para los íconos -->
@@ -41,7 +42,7 @@
         <!-- Contenedor para los botones -->
         <div class="button-container">
             <a href="{{ url_for('index') }}" class="btn-back">
-                <i class="fas fa-arrow-left"></i> Nuevo sorteo
+                <i class="fas fa-arrow-left"></i> Realizar un nuevo sorteo
             </a>
             <form action="{{ url_for('result') }}" method="POST" id="redraw-form">
                 <button type="submit" class="btn-sorteo" id="redraw-button">
