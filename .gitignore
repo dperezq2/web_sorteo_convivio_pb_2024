@@ -52,4 +52,6 @@ uploads/
 uploads/*/
 uploads/**/*.png
 
+static/uploads/
+
 .flask_session/
