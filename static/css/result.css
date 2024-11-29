@@ -27,6 +27,7 @@ body {
 
 .header .logo {
     height: 50px; /* Tamaño pequeño del logo */
+    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -41,7 +42,7 @@ body {
 /* Contenedor principal */
 .container {
     width: 100%;
-    max-width: 700px; /* Ajustar el ancho de la tarjeta */
+    max-width: 900px; /* Ajustar el ancho de la tarjeta */
     margin: 0 auto;
     text-align: center;
     display: flex;

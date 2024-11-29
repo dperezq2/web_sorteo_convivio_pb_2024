@@ -105,7 +105,7 @@ if (redrawForm && resultCard && redrawButton) {
                 loaderContainer.style.display = 'none';
                 resultCard.style.display = 'block';
             });
-        }, 2000);  // Retraso de 2 segundos
+        }, 5000);  // Retraso de 5 segundos
     });
 }
 

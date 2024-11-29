@@ -73,16 +73,23 @@ def result():
             # Realizar el sorteo nuevamente
             winner = perform_raffle(participants)
             session['winner'] = winner
-            session['participants'] = participants  # Guardar los participantes actualizados
-            session['total_participants'] = total_participants  # Actualizar el total de participantes
-            
+
+            # Guardar el ganador actual en la lista de ganadores anteriores
+            previous_winners = session.get('previous_winners', [])
+            previous_winners.insert(0, winner)  # Insertar el nuevo ganador al inicio
+            session['previous_winners'] = previous_winners[:5]  # Mantener solo los 5 más recientes
+
+            # Guardar los participantes actualizados y el total de participantes
+            session['participants'] = participants
+            session['total_participants'] = total_participants
+
             # Redirigir a la misma página para mostrar el nuevo ganador y el contador actualizado
             return redirect(url_for('result'))
 
     # Extraer la información del ganador
     winner_name = winner.get('Empleado', 'No disponible')
     winner_photo = winner.get('PathFotografia', '')
-    
+
     return render_template('result.html', winner_name=winner_name, winner_photo=winner_photo, total_participants=total_participants)
 
 if __name__ == '__main__':
