@@ -1,28 +1,27 @@
-/* Loader de carga */
+/* Loader */
 .loader-container {
-    display: none;  /* Inicialmente oculto */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
+    display: none; /* Por defecto está oculto */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 55vh;
+    background-color: #ffffff;
+    flex-direction: column; /* Para alinear verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    margin-top: 20px; /* Espaciado debajo de la tarjeta del sorteo */
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 6px solid #f3f3f3; /* Color claro */
-    border-top: 6px solid #3498db; /* Color principal */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 10px;
+.loader-container.active {
+    display: flex; /* Cambia a flex para mostrar */
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.spinner-gif {
+    width: 200px; /* Ajusta el tamaño según tu gif */
+    height: auto;
+    margin: 0 auto; /* Centrar el gif */
+}
+
+.loader-container h2 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
 }

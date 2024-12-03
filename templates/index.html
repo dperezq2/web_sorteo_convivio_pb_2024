@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sorteo de Participantes</title>
+    <title>Sorteo Palo Blanco 2024</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
@@ -12,9 +12,10 @@
     <!-- Encabezado del evento -->
     <header class="header">
         <img src="{{ url_for('static', filename='img/logo_PB.jpg') }}" alt="Logo Palo Blanco" class="logo">
-        <img src="{{ url_for('static', filename='img/logo_highland2.png') }}" alt="Logo Highland" class="logo">
+        <img src="{{ url_for('static', filename='img/logo_highland.png') }}" alt="Logo Highland" class="logo">
         <h1 class="event-title">Convivio Navideño 2024</h1>
         <img src="{{ url_for('static', filename='img/logo_banamar.png') }}" alt="Logo Banamar" class="logo">
+        <img src="{{ url_for('static', filename='img/logo_highland2.png') }}" alt="Logo Highland" class="logo">
     </header>
 
     <div class="container">
@@ -31,15 +32,16 @@
                 </div>
                 <button type="submit" class="btn-sorteo" id="submit-button" disabled>Realizar Sorteo</button>
             </form>
+        
+        </div>
+        <!-- Loader para mostrar mientras se procesa el sorteo -->
+        <div class="loader-container">
+            <img src="{{ url_for('static', filename='img/ruleta.gif') }}" alt="Ruleta girando" class="spinner-gif">
+            <h2>Determinando ganador al azar...</h2>
         </div>
     </div>
 
-    <!-- Loader para mostrar mientras se procesa el sorteo -->
-    <div class="loader-container">
-        <div class="spinner"></div>
-        <h2>Determinando el ganador...</h2>
-    </div>
-    
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

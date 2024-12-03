@@ -15,6 +15,11 @@ body {
     margin: 20px auto; /* Espaciado automático en los lados */
 }
 
+.sorteo-card {
+    height: 70vh;
+    align-content: center;
+}
+
 /* Encabezado principal fijo en la parte superior */
 .header {
     position: fixed;
